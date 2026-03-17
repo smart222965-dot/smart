@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>OpenClaw MVP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body { font-family: sans-serif; background: #f4f4f9; margin: 0; padding: 0; }
+    .container { max-width: 900px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+    h1 { text-align: center; color: #555; }
+    .chat-box { height: 320px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; border-radius: 6px; background: #fafafa; }
+    .message { padding: 8px 10px; margin: 6px 0; border-radius: 6px; }
+    .user { background: #e8f5e9; text-align: right; }
+    .agent { background: #eef2ff; text-align: left; }
+    .input-area { display: flex; gap: 8px; margin-top: 12px; }
+    input[type="text"] { flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 6px; }
+    button { padding: 12px 16px; border-radius: 6px; border: none; background: #1e88e5; color: white; cursor: pointer; }
+    #status { font-size: 0.9em; color: #555; text-align: center; margin-top: 8px; }
+    #history { margin-top: 20px; }
+    #history ul { list-style: none; padding: 0; margin: 0; }
+    #history li { padding: 8px; border-bottom: 1px solid #eee; font-size: 0.85em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>OpenClaw MVP</h1>
+
+    <div class="chat-box" id="chat-box" aria-label="chat history">
+      <!-- Messages will appear here -->
+    </div>
+
+    <div class="input-area">
+      <input id="user-input" type="text" placeholder="Ask OpenClaw...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div id="status">Loading status...</div>
+
+    <div id="history">
+      <h3>Conversation History (Last 10)</h3>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>
