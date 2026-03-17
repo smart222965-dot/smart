@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+psycopg2-binary
+redis
+pyyaml
+python-dotenv
+pyobjc-core
+pyobjc-framework-Quartz
+pyautogui
